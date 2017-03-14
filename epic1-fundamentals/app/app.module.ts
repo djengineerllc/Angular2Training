@@ -9,6 +9,7 @@ import {HttpModule} from '@angular/http';
 //import {routing} from './components/routes/[pathToRoutes].routes';
 import {AppComponent} from './app.component';
 import {InventoryService} from './services/InventoryService.service';
+import {InventoryList} from './components/InventoryList.component';
 @NgModule(({
   imports: [
     BrowserModule,
@@ -18,7 +19,8 @@ import {InventoryService} from './services/InventoryService.service';
 //    routing
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    InventoryList
   ],
   providers: [
     InventoryService
