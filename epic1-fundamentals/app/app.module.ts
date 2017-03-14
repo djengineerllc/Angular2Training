@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 //import {routing} from './components/routes/[pathToRoutes].routes';
 import {AppComponent} from './app.component';
+import {InventoryService} from './services/InventoryService.service';
 @NgModule(({
   imports: [
     BrowserModule,
@@ -20,6 +21,7 @@ import {AppComponent} from './app.component';
     AppComponent
   ],
   providers: [
+    InventoryService
   ],
   bootstrap: [AppComponent]
 }))
