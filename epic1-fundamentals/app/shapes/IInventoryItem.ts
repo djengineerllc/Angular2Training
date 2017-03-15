@@ -1,7 +1,7 @@
 /** Created by pmoore on 3/14/17 */
 
 export interface IInventoryItem{
-    guid:string;
-    name:string;
-    price:number;
+    guid?:string;
+    name?:string;
+    price?:number;
 }
