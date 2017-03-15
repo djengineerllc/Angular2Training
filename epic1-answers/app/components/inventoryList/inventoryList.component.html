@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="small-12 columns">
+    Hello world from the InventoryList
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns text-center">
+    <h3>{{context}}</h3>
+  </div>
+</div>
+<div *ngFor="let item of items" [style.background-color]="(currentItem && item.name === currentItem.name) ? 'lightgray' : 'white'">
+  <span class="inventory-list-item" (click)="setCurrentItem(item)" style="cursor:pointer">{{item.name}}</span>
+</div>
+<table *ngIf="currentItem">
+  <tr>
+    <th>Current Item</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>{{currentItem.name}}</td>
+    <td>{{currentItem.priceg}}</td>
+  </tr>
+</table>
