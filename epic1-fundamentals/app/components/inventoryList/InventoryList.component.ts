@@ -11,18 +11,21 @@ import {IInventoryItem} from "../../shapes/IInventoryItem";
 export class InventoryList {
     context:string = 'Jewelry Rack';
     private _currentItem:IInventoryItem;
-
-    get currentItem():IInventoryItem{
+    items:IInventoryItem[] = [];
+    get currentItem():IInventoryItem {
         return this._currentItem ? this._currentItem : {};
     }
     setCurrentItem(item:IInventoryItem) {
+        console.info(item);
         this._currentItem = item;
     }
-    
     constructor(private inventoryService:InventoryService){//set to private to give visibility to the class
-
+        inventoryService.getItems('someContext')
+            .then((items:IInventoryItem[])=>{
+                this.items = items;
+            });
     }
     getItems():IInventoryItem[] {
-        return this.inventoryService.getItems();
+        return this.items;
     }
 }

@@ -1,8 +1,10 @@
 <div>Hey, this is the InventoryList component template!!!</div>
 <div>List Type: {{context}}</div>
-<div *ngFor="let item of getItems()" (click)="setCurrentItem(item)">
+<ul>
+<li *ngFor="let item of items" (click)="setCurrentItem(item)">
     Name: <span>{{item.name}}</span>&nbsp;Price: <span>{{item.price}}</span>
-</div>
+</li>
+<ul>
 <div>
     <p>Guid: {{currentItem.guid}}</p>
     <p>Name: {{currentItem.name}}</p>
