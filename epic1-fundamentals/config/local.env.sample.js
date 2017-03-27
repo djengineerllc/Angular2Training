@@ -24,7 +24,8 @@ var config = {
   browser: 'windows',
   browserConfig: {
     osx: '/Applications/Google\ Chrome.app',
-    windows: 'chrome'
+    windows: 'chrome',
+    linux: 'google-chrome'
   }
 };
 
