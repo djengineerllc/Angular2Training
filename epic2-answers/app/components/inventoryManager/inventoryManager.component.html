@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="small-12 columns text-center">
+    <h2>Inventory Manager</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns text-center">
+    <a (click)="setContext(jewelryRackListName)">Select {{jewelryRackListName}}</a>
+  </div>
+  <div class="small-12 columns text-center">
+    <a (click)="setContext(allListName)">Select {{allListName}}</a>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns text-center">
+    <inventory-list [context]="selectedContext"></inventory-list>
+  </div>
+</div>

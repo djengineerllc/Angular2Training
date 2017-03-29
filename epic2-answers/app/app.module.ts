@@ -11,6 +11,7 @@ import {AppComponent} from './app.component';
 import {InventoryList} from "./components/inventoryList/inventoryList.component";
 import {InventoryService} from "./services/inventoryService.service";
 import {BackendInventoryService} from "./services/backend/backendInventoryService.service";
+import {InventoryManager} from "./components/inventoryManager/inventoryManager.component";
 @NgModule(({
   imports: [
     BrowserModule,
@@ -21,7 +22,8 @@ import {BackendInventoryService} from "./services/backend/backendInventoryServic
   ],
   declarations: [
     AppComponent,
-    InventoryList
+    InventoryManager,
+    InventoryList,
   ],
   providers: [
     InventoryService,
