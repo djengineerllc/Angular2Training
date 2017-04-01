@@ -1,0 +1,57 @@
+<div class="callout">
+  <div class="row">
+    <div class="small-12 columns text-center">
+      <h3>{{context}}</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns text-center">
+      <h4>All Items</h4>
+    </div>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items"
+          [style.background-color]="(currentItem && item.name === currentItem.name) ? 'pink' : 'initial'"
+          (click)="setCurrentItem(item)">
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="small-12 columns">
+      <form>
+        <label>Search: &nbsp;<input type="text" value="" (change)="findItem()"></label>
+      </form>
+    </div>
+  </div>
+  <div  *ngIf="currentItem">
+    <div class="row">
+        <div class="small-12 columns text-center">
+          <h4>Current Item</h4>
+        </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Current Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{currentItem.name}}</td>
+          <td><span [style.display]="currentItem.price > 100.0 ? 'none':'inherit'">{{currentItem.price}}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
